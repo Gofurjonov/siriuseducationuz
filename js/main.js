@@ -59,3 +59,26 @@ function sendTelegram(){
     Xabar.value='';
     subject.value='';
   };
+  const Ismi =document.querySelector('#nameuz');
+const Numbere = document.querySelector('#number');
+const Xabarlar = document.querySelector('#message');
+function sendBot(){
+    let text="<strong>Ismi: </strong>"+Ismi.value+"%0A<strong>Telefon: </strong>"+Numbere.value;
+      console.log(text);
+    let theUrl ="https://api.telegram.org/bot6243475741:AAF0b8yfgB6yuxjtAjRyp_gbjpnSOi_f61E/sendMessage?chat_id=673381009&parse_mode=html&text=" + text;
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open("GET", theUrl, false);
+      xmlHttp.send( null );
+    Ismi.value='';
+    Numbere.value='';
+};
+const Numberu = document.querySelector('#numberu');
+function sendBota(){
+    let text="%0A<strong>Telefon: </strong>"+Numberu.value;
+      console.log(text);
+    let theUrl ="https://api.telegram.org/bot6243475741:AAF0b8yfgB6yuxjtAjRyp_gbjpnSOi_f61E/sendMessage?chat_id=673381009&parse_mode=html&text=" + text;
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open("GET", theUrl, false);
+      xmlHttp.send( null );
+    Numberu.value='';
+};
